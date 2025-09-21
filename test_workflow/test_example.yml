@@ -1,0 +1,19 @@
+# Test Example Configuration
+# This YAML config demonstrates the cleaning pipeline settings
+# for the test workflow with sample data
+
+sources:
+  - path: ./input
+    include: ["*.csv", "*.jsonl", "*.json"]
+
+cleaning:
+  drop_duplicates: true
+  trim_whitespace: true
+  normalize_unicode: true
+  remove_empty: true
+  lower_keys: false
+
+export:
+  format: parquet  # options: csv|jsonl|parquet|json
+  output_dir: ./output
+  filename: cleaned_dataset
