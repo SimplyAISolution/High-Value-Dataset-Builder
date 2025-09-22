@@ -1,0 +1,9 @@
+version: 1
+name: High-Value-Dataset-Builder
+description: Dataset pipeline builder project
+container:
+  base: python-basic
+  python: "3.10"
+  dependencies:
+    pip:
+      - -r requirements.txt
